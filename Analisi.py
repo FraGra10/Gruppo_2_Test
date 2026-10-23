@@ -34,4 +34,38 @@ qualita_media = df.groupby("quality")["alcohol"].mean()
 
 print(qualita_media)
 
+while True:
+    x = 0
+    y = 0
+    str = "" #stringa input
+    titolo = ""
+    
+    while  not os.path.exists(csv):
+        csv = input("Inserisci nome del file da analizzare: ")
+    
+    df  = pd.read_csv(csv, sep=",")
 
+    while True:
+        #operazioni tra cui dimostrare grafico
+        print("[s] stampa dataframe  [x] seleziona X  [y] seleziona Y  [t] seleziona titolo [i] Info grafico  [g] Mostra grafico  [X]  Scegli un altro file")
+        match input("Inserire l'operazione da svolgere: ").lower():
+            case 's':
+                print(df)
+            case 'x':
+                while not str in df:
+                    str = input("Inserisci colonna da selezionare per X: ")
+                x = df[str]
+            case 'y':
+                while not str in df:
+                    str = input("Inserisci colonna da selezionare per Y: ")
+                y = df[str]
+            case 't':
+                titolo = input("Inserisci il titolo del grafico: ")
+            case 'i':
+                print("Titolo: ", titolo)
+                print("Asse delle X: ", x.name)
+                print("Asse delle Y: ", y.name)
+            case 'g':
+                #grafico(x, y, titolo)
+                pass
+        str = ""
