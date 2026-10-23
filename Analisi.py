@@ -19,6 +19,7 @@ def grafico(x, y, titolo):
 while True:
     x = 0
     y = 0
+    
     str = "" #stringa input
     titolo = ""
     csv = ""
@@ -27,6 +28,8 @@ while True:
         csv = input("Inserisci nome del file da analizzare: ")
     
     df  = pd.read_csv(csv, sep=",")
+    if "quality" in df:
+        y = df["quality"]
 
     ### STAMPA INFO
     #Presenza di duplicati e nulli 
