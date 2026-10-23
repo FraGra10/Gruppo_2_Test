@@ -1,39 +1,20 @@
 import pandas as pd 
 import numpy  as np 
-import os
 import matplotlib.pyplot as plt
 
 
-df  = pd.read_csv("winequality-red.csv", sep=",")
+df_wine_red   = pd.read_csv("winequality-red.csv", sep=",")
+df_wine_white = pd.read_csv("winequality-white.csv", sep=",")
 
-#Esplorazione# 
-#print(df_wine_red.columns)
-
-print(df.isnull().sum())
-
-print("Duplicati cd_df:", df.duplicated().sum())
+print(df_wine_white.columns)
 
 
-
-
-
-
-
-
-
-
-
-'''
 while True:
-    
-    while  not os.path.exists(csv):
-        
-        csv = input("Inserisci nome del file da analizzare: ")
-    
-    df  = pd.read_csv(csv, sep=",")
-
+    #scegli csv
 
     while True:
         #operazioni tra cui dimostrare grafico
         pass
-'''
+
+
+    pass
