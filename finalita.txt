@@ -1,0 +1,7 @@
+I file csv contengono informazioni riguardo a vini bianchi e rossi.
+
+ L'utente inserisce il parametro da utilizzare per metterla 
+ al confronto con la qualità in un grafico a barre.
+
+ Per prima cosa l'utente sceglie il csv. Una volta che ha scelto un csv valido
+ può scegliere quali dati stampare e inserire in una delle due assi.
