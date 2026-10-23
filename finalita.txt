@@ -1,0 +1,2 @@
+I file csv contengono informazioni riguardo a vini bianchi e rossi.
+
